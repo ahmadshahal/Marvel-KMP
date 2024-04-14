@@ -55,6 +55,8 @@ kotlin {
             implementation(libs.ktor.client.logging)
             implementation(libs.napier)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.paging.compose.common)
+            implementation(libs.paging.common)
 
         }
         iosMain.dependencies {

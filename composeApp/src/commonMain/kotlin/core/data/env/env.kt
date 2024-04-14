@@ -2,7 +2,7 @@ package core.data.env
 
 const val HOST = "gateway.marvel.com"
 const val PATH = "v1/public/"
-
+const val NETWORK_PAGE_SIZE = 10
 // * API_KEYS should be securely saved in uncommitted to git files
 // * eg. local.properties, but of the sake of this test and the requirement
 // * that it should run out of the box they were written publicly like this..

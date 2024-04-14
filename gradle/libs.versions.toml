@@ -21,6 +21,8 @@ kotlinxSerializationJson = "1.6.2"
 kotlinSerialization = "1.9.0"
 koinBom = "3.5.3"
 napier = "2.7.1"
+pagingCommon = "3.3.0-alpha02-0.4.0"
+pagingComposeCommon = "3.3.0-alpha02-0.4.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -49,6 +51,8 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koinBom" }
 koin-core = { group = "io.insert-koin", name = "koin-core" }
 napier = { module = "io.github.aakira:napier", version.ref = "napier" }
+paging-common = { module = "app.cash.paging:paging-common", version.ref = "pagingCommon" }
+paging-compose-common = { module = "app.cash.paging:paging-compose-common", version.ref = "pagingComposeCommon" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
