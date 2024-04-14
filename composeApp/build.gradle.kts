@@ -52,6 +52,9 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
+            implementation(libs.ktor.client.logging)
+            implementation(libs.napier)
+            implementation(libs.kotlinx.datetime)
 
         }
         iosMain.dependencies {
