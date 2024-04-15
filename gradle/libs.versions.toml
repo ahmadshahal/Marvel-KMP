@@ -23,6 +23,7 @@ koinBom = "3.5.3"
 napier = "2.7.1"
 pagingCommon = "3.3.0-alpha02-0.4.0"
 pagingComposeCommon = "3.3.0-alpha02-0.4.0"
+kotlinCryptoHashBom = "0.5.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -53,6 +54,8 @@ koin-core = { group = "io.insert-koin", name = "koin-core" }
 napier = { module = "io.github.aakira:napier", version.ref = "napier" }
 paging-common = { module = "app.cash.paging:paging-common", version.ref = "pagingCommon" }
 paging-compose-common = { module = "app.cash.paging:paging-compose-common", version.ref = "pagingComposeCommon" }
+kotlin-crypto-hash-bom = { group = "org.kotlincrypto.hash", name = "bom", version.ref = "kotlinCryptoHashBom" }
+kotlin-crypto-hash-md = { group = "org.kotlincrypto.hash", name = "md" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

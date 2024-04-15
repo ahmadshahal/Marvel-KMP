@@ -58,6 +58,8 @@ kotlin {
             implementation(libs.paging.compose.common)
             implementation(libs.paging.common)
 
+            implementation(project.dependencies.platform(libs.kotlin.crypto.hash.bom))
+            implementation(libs.kotlin.crypto.hash.md)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)

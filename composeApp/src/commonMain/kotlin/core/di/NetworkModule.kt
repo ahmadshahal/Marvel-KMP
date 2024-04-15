@@ -2,6 +2,7 @@ package core.di
 
 import core.data.env.HOST
 import core.data.env.PATH
+import core.data.env.PRIVATE_API_KEY
 import core.data.env.PUBLIC_API_KEY
 import core.data.exceptions.ServerException
 import core.data.models.ErrorResponse
@@ -21,9 +22,11 @@ import io.ktor.http.HttpHeaders
 import io.ktor.http.URLProtocol
 import io.ktor.http.path
 import io.ktor.serialization.kotlinx.json.json
+import io.ktor.utils.io.core.toByteArray
 import kotlinx.datetime.Clock
 import kotlinx.serialization.json.Json
 import org.koin.dsl.module
+import org.kotlincrypto.hash.md.MD5
 
 val NetworkModule = module {
     single {
@@ -77,10 +80,9 @@ val NetworkModule = module {
                     val timestamp = Clock.System.now().epochSeconds
                     parameters.append("ts", timestamp.toString())
                     parameters.append("apikey", PUBLIC_API_KEY)
-                    // TODO: Implement md5Hash in Multiplatform
-                    // val hash = md5Hash(timestamp.toString() + PRIVATE_API_KEY + PUBLIC_API_KEY)
-                    val hash = ""
-                    parameters.append("hash", hash)
+                    val toBeHashed = timestamp.toString() + PRIVATE_API_KEY + PUBLIC_API_KEY
+                    val hash = MD5().digest(toBeHashed.encodeToByteArray())
+                    parameters.append("hash", hash.decodeToString())
                 }
             }
         }
