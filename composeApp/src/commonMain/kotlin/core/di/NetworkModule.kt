@@ -22,7 +22,6 @@ import io.ktor.http.HttpHeaders
 import io.ktor.http.URLProtocol
 import io.ktor.http.path
 import io.ktor.serialization.kotlinx.json.json
-import io.ktor.utils.io.core.toByteArray
 import kotlinx.datetime.Clock
 import kotlinx.serialization.json.Json
 import org.koin.dsl.module

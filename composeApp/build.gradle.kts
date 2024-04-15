@@ -36,6 +36,7 @@ kotlin {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
+            implementation(libs.koin.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -44,17 +45,21 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.ktor.client.auth)
+            implementation(libs.ktor.client.logging)
+
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization.json)
+            implementation(libs.kotlinx.datetime)
+
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
-            implementation(libs.ktor.client.logging)
+
             implementation(libs.napier)
-            implementation(libs.kotlinx.datetime)
             implementation(libs.paging.compose.common)
             implementation(libs.paging.common)
 
