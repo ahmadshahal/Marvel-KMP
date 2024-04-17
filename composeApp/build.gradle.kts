@@ -62,6 +62,10 @@ kotlin {
             implementation(libs.coil)
             implementation(libs.coil.compose)
 
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenmodel)
+            implementation(libs.voyager.koin)
+
             implementation(libs.napier)
             implementation(libs.paging.compose.common)
             implementation(libs.paging.common)

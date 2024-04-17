@@ -9,6 +9,8 @@ import features.characters.domain.usecases.GetComicsUseCase
 import features.characters.domain.usecases.GetEventsUseCase
 import features.characters.domain.usecases.GetSeriesUseCase
 import features.characters.domain.usecases.GetStoriesUseCase
+import features.characters.ui.viewmodels.CharacterDetailsViewModel
+import features.characters.ui.viewmodels.CharactersViewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
@@ -21,6 +23,6 @@ val CharactersModule = module {
     factory { GetEventsUseCase(get()) }
     factory { GetSeriesUseCase(get()) }
     factory { GetStoriesUseCase(get()) }
-    // viewModel { CharactersViewModel(get()) }
-    // viewModel { CharacterDetailsViewModel(get(), get(), get(), get(), get(), get()) }
+    factory { CharactersViewModel(get()) }
+    factory { CharacterDetailsViewModel(get(), get(), get(), get(), get()) }
 }

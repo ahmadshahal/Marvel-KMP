@@ -25,6 +25,7 @@ napier = "2.7.1"
 pagingCommon = "3.3.0-alpha02-0.4.0"
 pagingComposeCommon = "3.3.0-alpha02-0.4.0"
 kotlinCryptoHashBom = "0.5.1"
+voyager = "1.0.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -59,6 +60,9 @@ kotlin-crypto-hash-bom = { group = "org.kotlincrypto.hash", name = "bom", versio
 kotlin-crypto-hash-md = { group = "org.kotlincrypto.hash", name = "md" }
 coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-screenmodel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
