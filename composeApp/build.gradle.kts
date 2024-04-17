@@ -59,12 +59,13 @@ kotlin {
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
 
-            implementation(libs.coil)
-            implementation(libs.coil.compose)
+            implementation(libs.coil3.compose)
+            implementation(libs.coil3.network.ktor)
 
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.screenmodel)
             implementation(libs.voyager.koin)
+            implementation(libs.voyager.transitions)
 
             implementation(libs.napier)
             implementation(libs.paging.compose.common)

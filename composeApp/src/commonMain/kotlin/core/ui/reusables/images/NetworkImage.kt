@@ -18,6 +18,7 @@ import androidx.compose.ui.layout.ContentScale
 import coil3.ImageLoader
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import coil3.util.DebugLogger
 import core.ui.reusables.loading.shimmerBrush
 import marvel.composeapp.generated.resources.Res
 import marvel.composeapp.generated.resources.ic_marvel_logo
@@ -46,7 +47,7 @@ fun NetworkImage(
             onError = { loading = false },
             colorFilter = colorFilter,
             error = painterResource(Res.drawable.ic_marvel_logo),
-            imageLoader = ImageLoader(context)
+            imageLoader = ImageLoader.Builder(context).logger(DebugLogger()).build()
         )
         val shimmerBrush = shimmerBrush()
         AnimatedVisibility(
