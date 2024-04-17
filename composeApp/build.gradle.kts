@@ -59,8 +59,8 @@ kotlin {
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
 
+            implementation(libs.coil)
             implementation(libs.coil.compose)
-            implementation(libs.coil.svg)
 
             implementation(libs.napier)
             implementation(libs.paging.compose.common)

@@ -16,7 +16,7 @@ junit = "4.13.2"
 kotlin = "1.9.22"
 kotlinxDatetime = "0.6.0-RC.2"
 ktor = "2.3.10"
-coilCompose = "2.4.0"
+coil = "3.0.0-alpha01"
 coroutines = "1.8.0"
 kotlinxSerializationJson = "1.6.2"
 kotlinSerialization = "1.9.0"
@@ -57,8 +57,8 @@ paging-common = { module = "app.cash.paging:paging-common", version.ref = "pagin
 paging-compose-common = { module = "app.cash.paging:paging-compose-common", version.ref = "pagingComposeCommon" }
 kotlin-crypto-hash-bom = { group = "org.kotlincrypto.hash", name = "bom", version.ref = "kotlinCryptoHashBom" }
 kotlin-crypto-hash-md = { group = "org.kotlincrypto.hash", name = "md" }
-coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
-coil-svg = { module = "io.coil-kt:coil-svg", version.ref = "coilCompose" }
+coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
