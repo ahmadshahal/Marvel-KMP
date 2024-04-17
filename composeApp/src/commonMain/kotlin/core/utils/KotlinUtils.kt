@@ -1,5 +1,7 @@
 package core.utils
 
+import org.kotlincrypto.hash.md.MD5
+
 /**
  * Evaluates a list of Results and returns a Result containing a list of their values.
  *
@@ -24,3 +26,8 @@ fun<T> List<Result<T>>.evaluate(): Result<List<T?>> {
     // Return a success Result containing the list of values
     return Result.success(results)
 }
+
+fun String.md5() = MD5().digest(this.encodeToByteArray()).toHex()
+
+@OptIn(ExperimentalUnsignedTypes::class)
+fun ByteArray.toHex() = asUByteArray().joinToString("") { it.toString(16).padStart(2, '0') }

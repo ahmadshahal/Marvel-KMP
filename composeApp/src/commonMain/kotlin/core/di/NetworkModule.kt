@@ -6,6 +6,7 @@ import core.data.env.PRIVATE_API_KEY
 import core.data.env.PUBLIC_API_KEY
 import core.data.exceptions.ServerException
 import core.data.models.ErrorResponse
+import core.utils.md5
 import io.github.aakira.napier.Napier
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -25,7 +26,6 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.datetime.Clock
 import kotlinx.serialization.json.Json
 import org.koin.dsl.module
-import org.kotlincrypto.hash.md.MD5
 
 val NetworkModule = module {
     single {
@@ -80,8 +80,7 @@ val NetworkModule = module {
                     parameters.append("ts", timestamp.toString())
                     parameters.append("apikey", PUBLIC_API_KEY)
                     val toBeHashed = timestamp.toString() + PRIVATE_API_KEY + PUBLIC_API_KEY
-                    val hash = MD5().digest(toBeHashed.encodeToByteArray())
-                    parameters.append("hash", hash.decodeToString())
+                    parameters.append("hash", toBeHashed.md5())
                 }
             }
         }
