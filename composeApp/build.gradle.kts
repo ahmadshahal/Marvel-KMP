@@ -76,6 +76,8 @@ kotlin {
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            // TODO: Remove when koin issue solved on iOS
+            implementation("co.touchlab:stately-common:2.0.5")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

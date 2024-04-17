@@ -1,15 +1,16 @@
 import SwiftUI
+import ComposeApp
 
 @main
 struct iOSApp: App {
 
     init() {
-        InitHelperIosKt.init()
+        InitHelper_iosKt.doInit()
     }
 
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			ContentView().ignoresSafeArea()
 		}
 	}
 }
