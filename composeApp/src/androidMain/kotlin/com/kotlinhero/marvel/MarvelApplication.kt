@@ -1,11 +1,11 @@
 package com.kotlinhero.marvel
 
 import android.app.Application
-import com.kotlinhero.initKoin
+import com.kotlinhero.init
 
 class MarvelApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        initKoin(this@MarvelApplication)
+        init(this@MarvelApplication)
     }
 }
