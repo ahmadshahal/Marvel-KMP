@@ -6,6 +6,6 @@ import com.kotlinhero.init
 class MarvelApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        init(this@MarvelApplication)
+        init()
     }
 }

@@ -35,6 +35,7 @@ import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import core.ui.reusables.buttons.BackToTopButton
+import enableLightEdgeToEdge
 import features.characters.domain.entities.Character
 import features.characters.ui.components.CharactersLazyGrid
 import features.characters.ui.viewmodels.CharactersViewModel
@@ -51,6 +52,7 @@ object CharactersScreen : Screen {
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     override fun Content() {
+        enableLightEdgeToEdge()
         val viewModel = getScreenModel<CharactersViewModel>()
         val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
         val coroutineScope = rememberCoroutineScope()

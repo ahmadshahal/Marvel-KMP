@@ -43,6 +43,7 @@ import core.ui.reusables.error.NetflixErrorBox
 import core.ui.reusables.images.NetworkImage
 import core.ui.reusables.loading.NetflixLoadingBox
 import core.ui.states.FetchState
+import enableDarkEdgeToEdge
 import features.characters.domain.entities.Character
 import features.characters.domain.entities.publications.Comic
 import features.characters.domain.entities.publications.Event
@@ -70,6 +71,7 @@ class CharacterDetailsScreen(private val characterId: Int) : Screen {
 
     @Composable
     override fun Content() {
+        enableDarkEdgeToEdge()
         val viewModel = getScreenModel<CharacterDetailsViewModel>()
         LaunchedEffect(key1 = Unit) {
             viewModel.getCharacterDetails(characterId)
